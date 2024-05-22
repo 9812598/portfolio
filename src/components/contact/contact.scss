@@ -48,6 +48,7 @@
     flex: 1;
     position: relative;
     object-fit: cover;
+    height: 100%;
 
     @include mobile {
       padding: 20px;
@@ -63,8 +64,9 @@
       stroke: orange;
       position: absolute;
       left: 20%;
-      top: 0;
+      top: 20%;
       z-index: -1;
+      opacity: 0.33;
 
       @include mobile {
         left: 5%;

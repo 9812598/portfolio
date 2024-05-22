@@ -1,5 +1,5 @@
 html {
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   scroll-behavior: smooth;
 }
 
@@ -21,7 +21,14 @@ a {
 }
 
 section {
-  height: 100vh;
+  height: 100lvh;
+  width: 100vw;
+  scroll-snap-align: center;
+  overflow: hidden;
+}
+
+section:first-of-type {
+  height: 100svh;
   width: 100vw;
   scroll-snap-align: center;
   overflow: hidden;

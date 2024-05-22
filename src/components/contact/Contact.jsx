@@ -71,7 +71,13 @@ const Contact = () => {
         </motion.div>
       </motion.div>
       <div className="formContainer">
-        <motion.div
+        <img
+          src="/svg/contact-women-talking-svgrepo-com.svg"
+          alt=""
+          className="phoneSvg"
+        />
+
+        {/* <motion.div
           className="svgContainer"
           initial={{ opacity: 1 }}
           whileInView={{ opacity: 0 }}
@@ -82,9 +88,9 @@ const Contact = () => {
             alt=""
             className="phoneSvg"
           />
-        </motion.div>
+        </motion.div> */}
 
-        <motion.form
+        {/* <motion.form
           ref={formRef}
           onSubmit={sendEmail}
           initial={{ opacity: 0 }}
@@ -97,7 +103,7 @@ const Contact = () => {
           <button type="submit">Submit</button>
           {error && "Error"}
           {success && "Success"}
-        </motion.form>
+        </motion.form> */}
       </div>
     </motion.div>
   );
