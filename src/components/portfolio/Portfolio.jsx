@@ -4,6 +4,13 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 const items = [
   {
+    id: 0,
+    title: "3d site on Three.js",
+    img: "/portfolio/space2.JPG",
+    desc: "The site was created purely for educational purposes.",
+    link: "https://space.kobelev.website/",
+  },
+  {
     id: 1,
     title: "Logistic company",
     img: "/portfolio/mbe.png",
@@ -30,6 +37,27 @@ const items = [
     img: "/portfolio/bazaskachat.png",
     desc: "Fully automated store with payment options and instant download of goods. Without manager's participation.",
     link: "https://bazaskachat.ru/",
+  },
+  {
+    id: 5,
+    title: "Shut-off valves and accessories",
+    img: "/portfolio/roke.JPG",
+    desc: "Online store with product filters, customer registration, shopping cart, favorites. Desktop version only.",
+    link: "https://roke.pro/",
+  },
+  {
+    id: 6,
+    title: "Spare parts for meat industry",
+    img: "/portfolio/smiraks2.JPG",
+    desc: "Adaptive website with a convenient admin panel for editing content",
+    link: "https://smiraks.com/",
+  },
+  {
+    id: 7,
+    title: "Car rental service in Kazan and Nizhnekamsk",
+    img: "/portfolio/carrent2.JPG",
+    desc: "Several forms for calculating the cost of rent taking into account many factors.",
+    link: "https://carrent-kzn.ru/",
   },
 ];
 
@@ -81,9 +109,11 @@ const Portfolio = () => {
         <h1>Featured Works</h1>
         <motion.div style={{ scaleX }} className="progressBar"></motion.div>
       </div>
-      {items.map((item) => (
-        <Single item={item} key={item.id} />
-      ))}
+      {items
+        .sort((a, b) => b.id - a.id)
+        .map((item) => (
+          <Single item={item} key={item.id} />
+        ))}
     </div>
   );
 };

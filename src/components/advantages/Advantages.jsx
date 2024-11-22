@@ -90,7 +90,7 @@ const Advantages = () => {
           whileHover={{ background: "lightgray", color: "black" }}
         >
           <h2>Communicative</h2>
-          <p>I'm very friendly. I love people and know how to support.</p>
+          <p>I&apos;m very friendly. I love people and know how to support.</p>
           <a href="/#Contact">
             <button>Contact</button>
           </a>
