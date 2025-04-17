@@ -2,4 +2,4 @@
 
 https://kobelev.soft-easy.ru/
 
-easy project on coolify + vds
+easy project on coolify + vds!
