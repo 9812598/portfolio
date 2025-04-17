@@ -1,5 +1,5 @@
 html {
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory; // Ensure snapping is mandatory
   scroll-behavior: smooth;
 }
 
@@ -13,6 +13,10 @@ html {
 body {
   background-color: #0c0c1d;
   color: lightgray;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; //
 }
 
 a {
@@ -23,8 +27,9 @@ a {
 section {
   height: 100lvh;
   width: 100vw;
-  scroll-snap-align: center;
+  scroll-snap-align: center; // Align sections to the center
   overflow: hidden;
+  margin-bottom: 20px; // Add margin below each section
 }
 
 section:first-of-type {
@@ -47,5 +52,11 @@ section:first-of-type {
 @mixin desktop {
   @media (max-width: 1366px) {
     @content;
+  }
+}
+
+@media (max-width: 768px) {
+  #Advantages {
+    display: none; // Hide all sections on mobile view
   }
 }

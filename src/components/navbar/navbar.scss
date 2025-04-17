@@ -33,5 +33,10 @@
         height: 23px;
       }
     }
+    .kobelev {
+      @media (max-width: 1530px) {
+        padding-left: 13%;
+      }
+    }
   }
 }

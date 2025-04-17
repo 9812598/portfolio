@@ -1,3 +1,3 @@
 # React + Vite
 
-https://kobelev.website/
+https://kobelev.soft-easy.ru/

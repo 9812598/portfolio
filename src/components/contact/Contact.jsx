@@ -23,6 +23,7 @@ const Contact = () => {
   const formRef = useRef();
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [popup, setPopup] = useState("");
 
   const isInView = useInView(ref, { margin: "-100px" });
 
@@ -47,6 +48,13 @@ const Contact = () => {
       );
   };
 
+  const copyToClipboard = (text) => {
+    navigator.clipboard.writeText(text).then(() => {
+      setPopup(`${text} copied to clipboard!`);
+      setTimeout(() => setPopup(""), 2000); // Hide popup after 2 seconds
+    });
+  };
+
   return (
     <motion.div
       ref={ref}
@@ -57,17 +65,29 @@ const Contact = () => {
     >
       <motion.div className="textContainer" variants={variants}>
         <motion.h1 variants={variants}>Let’s work together</motion.h1>
-        <motion.div className="item" variants={variants}>
-          <h2>Mail</h2>
-          <span>9812598@gmail.com</span>
+        <motion.div
+          className="item"
+          variants={variants}
+          onClick={() => copyToClipboard("9812598@gmail.com")}
+        >
+          <h2>9812598@gmail.com</h2>
+          <span>Mail</span>
         </motion.div>
-        <motion.div className="item" variants={variants}>
-          <h2>Telegramm</h2>
-          <span>@korsoni</span>
+        <motion.div
+          className="item"
+          variants={variants}
+          onClick={() => copyToClipboard("@korsoni")}
+        >
+          <h2>@korsoni</h2>
+          <span>Telegram</span>
         </motion.div>
-        <motion.div className="item" variants={variants}>
-          <h2>Phone</h2>
-          <span>+7 (981) 724-86-99</span>
+        <motion.div
+          className="item"
+          variants={variants}
+          onClick={() => copyToClipboard("+7 (981) 724-86-99")}
+        >
+          <h2>+7 (981) 724-86-99</h2>
+          <span>Phone</span>
         </motion.div>
       </motion.div>
       <div className="formContainer">
@@ -76,7 +96,11 @@ const Contact = () => {
           alt=""
           className="phoneSvg"
         />
-
+        {popup && (
+          <div className="popup">
+            <span className="checkmark">✔</span> {popup}
+          </div>
+        )}
         {/* <motion.div
           className="svgContainer"
           initial={{ opacity: 1 }}

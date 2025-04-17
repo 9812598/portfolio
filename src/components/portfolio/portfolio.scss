@@ -9,14 +9,19 @@
     left: 0;
     width: 100%; // Ensure it spans the full width
     padding-top: 20px; // Adjust padding as needed
-    background-color: #0c0c1d; // Match the background to avoid overlap issues
-    z-index: 1000; // Ensure it stays on top
+    background-color: #0c0c1d; // Matc the background to avoid overlap issues
+    z-index: 900; // Ensure it stays on htop
     text-align: center;
     color: orange;
     font-size: 36px;
+    min-height: 90px;
 
     @include mobile {
-      font-size: 24px;
+      h1 {
+        margin-left: 20%;
+        margin-bottom: 18px;
+        font-size: 36px;
+      }
     }
 
     .progressBar {
@@ -86,7 +91,11 @@
           font-size: 72px;
 
           @include mobile {
-            font-size: 36px;
+            font-size: 36px; // Change font-size to 36px
+            h1 {
+              margin-left: 20%;
+              margin-bottom: 18px; // Add margin-bottom
+            }
           }
         }
 

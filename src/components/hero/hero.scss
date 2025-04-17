@@ -19,6 +19,7 @@
       flex-direction: column;
       justify-content: center;
       gap: 40px;
+      padding-inline: 10px;
 
       @include mobile {
         height: 60%;

@@ -100,6 +100,7 @@
     display: flex;
     max-width: 1366px;
     margin: auto;
+    justify-content: space-between; // Ensure space is distributed evenly
 
     @include mobile {
       flex-direction: column;
@@ -107,17 +108,20 @@
     }
 
     .box {
+      flex: 1; // Make each box take equal space
       padding: 50px;
       border: 0.5px solid gray;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      margin: 10px; // Add margin between boxes
 
       @include mobile {
         border: none;
         align-items: center;
         gap: 5px;
         padding: 5px;
+        margin: 5px 0; // Adjust margin for mobile view
       }
 
       p {
@@ -142,4 +146,8 @@
       }
     }
   }
+}
+
+.titleContainer {
+  margin-bottom: 20px; // Add margin to separate "Featured Works" from other content
 }
